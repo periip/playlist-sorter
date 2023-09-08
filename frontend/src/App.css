@@ -1,0 +1,99 @@
+:root {
+    --yellow: #f9cdad;
+    --beige: #ece5ce;
+    --yellow-beige: #eed5b3;
+    --brown: #774f38;
+    --light-brown: #b8a59c;
+    --white: white;
+    --light-black: #545775;
+    --green: #83af9b;
+    --gray: #818181;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;   
+}
+
+.video-player {
+    position: absolute;
+    transform: translate(0%, 50%);
+    background-color: turquoise;
+    z-index: 1;
+    transition: 0.4s
+}
+
+@media (min-width: 1000px) {
+    .horizontal-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column
+    }
+
+    .page {
+        height: 100vh; /* thinking about making page centered middle, so turn these into % later */
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    .intro-container {
+        width: 50%;
+        height: 20%;
+    }
+    
+    .button {
+        width: 15%;
+    }
+
+    .track-list {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .track-item--layout {
+        margin: 0 10px;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .player-button {
+        width: 150px;
+        height: 150px;
+        padding: 0;
+        border-radius: 10px;
+        border-style: none;
+    }
+
+    .thumbnail {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .player-button:hover {
+        opacity: 0.5;
+        height: 200px;
+        width: 200px;
+        transition: 0.4s; /* would love to have an animation removing mouse */
+    }
+
+    .library-header {
+        margin: 20px;
+    }
+}
